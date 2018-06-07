@@ -7,6 +7,8 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.0'
 # Use Bcrypt as the authintecation service for the application
 gem 'bcrypt', '~> 3.1.12'
+# assert_template has been extracted to a gem. To continue using it Use the following gem
+gem 'rails-controller-testing'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

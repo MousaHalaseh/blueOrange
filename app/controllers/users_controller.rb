@@ -15,7 +15,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    # Some Long shit
+    @user = User.new(user_params)
+    if @user.save
+      flash[:success] = "Thanks for creating an account at Blue Orange <3"
+      redirect_to @user
+    else
+      flash[:danger] = "Something went wrong"
+      render 'new'
+    end
   end
 
   def edit
@@ -27,6 +34,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user.destroy
   end
 
   private
